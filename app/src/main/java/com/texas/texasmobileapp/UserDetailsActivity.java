@@ -21,6 +21,16 @@ public class UserDetailsActivity extends AppCompatActivity {
 
         tvFullName = findViewById(R.id.full_name_value);
         tvMobileNumber = findViewById(R.id.mobile_number_value);
+        String fullName = "";
+        String mobileNumber = "";
+
+        if(getIntent()!=null){
+            fullName = getIntent().getStringExtra("full_name");
+            mobileNumber = getIntent().getStringExtra("mobile_number");
+        }
+
+        tvFullName.setText(fullName);
+        tvMobileNumber.setText(mobileNumber);
 
     }
 }

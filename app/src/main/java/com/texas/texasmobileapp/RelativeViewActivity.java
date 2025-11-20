@@ -55,7 +55,7 @@ public class RelativeViewActivity extends AppCompatActivity {
 
 
                 String fullNameValue = fullName.getText().toString();
-                double mobileNumberValue = Double.parseDouble(mobileNumber.getText().toString());
+                String mobileNumberValue = mobileNumber.getText().toString();
                 String emailValue = email.getText().toString();
                 String gender = "";
 

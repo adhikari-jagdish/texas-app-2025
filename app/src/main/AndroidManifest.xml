@@ -13,10 +13,10 @@
         android:theme="@style/Theme.TexasMobileApp"
         tools:targetApi="31">
         <activity
-            android:name=".UserDetailsActivity"
+            android:name=".ActivityLifecycle"
             android:exported="false" />
         <activity
-            android:name=".UserRegistration"
+            android:name=".ConstraintLayoutActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +25,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserRegistration"
+            android:exported="false"></activity>
+        <activity
             android:name=".RelativeViewActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
