@@ -17,4 +17,9 @@ public class FragmentTwo extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_two, container, false);
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
 }

@@ -17,6 +17,7 @@ public class FragmentActivity extends AppCompatActivity {
     Button btnChangeFragment;
     FragmentOne fragmentOne = new FragmentOne();
     FragmentTwo fragmentTwo = new FragmentTwo();
+    boolean showFragmentOne = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,12 @@ public class FragmentActivity extends AppCompatActivity {
         btnChangeFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                if(showFragmentOne){
+                    loadFragment(fragmentOne);
+                }else{
+                    loadFragment(fragmentTwo);
+                }
+                showFragmentOne = !showFragmentOne;
             }
         });
     }
