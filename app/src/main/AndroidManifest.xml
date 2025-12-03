@@ -13,19 +13,23 @@
         android:theme="@style/Theme.TexasMobileApp"
         tools:targetApi="31">
         <activity
-            android:name=".MenuActivity"
+            android:name=".PopupMenuActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false">
+
         </activity>
         <activity
             android:name=".FragmentActivity"
-            android:exported="false"/>
-
-
+            android:exported="false" />
         <activity
             android:name=".ChildActivity"
             android:exported="false" />
@@ -37,7 +41,7 @@
             android:exported="false" />
         <activity
             android:name=".ConstraintLayoutActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".UserDetailsActivity"
             android:exported="false" />
