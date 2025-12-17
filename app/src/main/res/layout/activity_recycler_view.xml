@@ -21,7 +21,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerview_example"
+        android:id="@+id/recyclerview_countries"
         app:layout_constraintTop_toBottomOf="@id/tv_recyclerview_title"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="10dp"/>
