@@ -40,4 +40,31 @@ public class TexasDAO {
         cursor.close();
         return list;
     }
+
+    //UPDATE
+    public int updateData(int id, String name, String course){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DbHelper.COL_NAME, name);
+        contentValues.put(DbHelper.COL_COURSE, course);
+
+        return db.update(
+                DbHelper.TABLE_NAME,
+                contentValues,
+                DbHelper.COL_ID + "=?",
+                new String[]{String.valueOf(id)}
+        );
+    }
+
+    //DELETE
+    public int deleteData(int id){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        return db.delete(
+                DbHelper.TABLE_NAME,
+                DbHelper.COL_ID + "=?",
+                new String[]{String.valueOf(id)}
+        );
+    }
 }
